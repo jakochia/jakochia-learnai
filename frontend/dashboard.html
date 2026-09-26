@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="teens">
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dashboard — Jakochia LearnAI</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/theme.css" />
+</head>
+<body>
+<nav class="navbar"><div class="container">
+  <a href="dashboard.html" class="brand">🧠 Jakochia<span>LearnAI</span></a>
+  <div class="nav-links">
+    <a href="dashboard.html" class="active">Dashboard</a>
+    <a href="upload.html">Upload</a>
+    <a href="chat.html">Chat</a>
+    <a href="quiz.html">Quizzes</a>
+    <a href="flashcards.html">Flashcards</a>
+    <a href="planner.html">Planner</a>
+    <div class="theme-switcher">
+      <button data-theme-btn="kids">🎒</button>
+      <button data-theme-btn="teens" class="active">🏫</button>
+      <button data-theme-btn="adults">🎓</button>
+    </div>
+    <a href="#" id="logout">Logout</a>
+  </div>
+</div></nav>
+<div class="container mt-24">
+  <h2 id="greeting" class="mb-8">Welcome 👋</h2>
+  <p class="muted mb-24">Here is your learning overview.</p>
+  <div class="card mb-24">
+    <div class="stat-grid">
+      <div><div class="stat-value" id="stat-time">—</div><div class="stat-label">Study Time</div></div>
+      <div><div class="stat-value" id="stat-questions">—</div><div class="stat-label">Questions</div></div>
+      <div><div class="stat-value" id="stat-avg">—</div><div class="stat-label">Quiz Average</div></div>
+      <div><div class="stat-value" id="stat-streak">—</div><div class="stat-label">Day Streak</div></div>
+      <div><div class="stat-value" id="stat-xp">—</div><div class="stat-label">XP</div></div>
+      <div><div class="stat-value" id="stat-level">—</div><div class="stat-label">Level</div></div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="card"><h3 class="mb-16">Subject Performance</h3><div id="subjects"></div></div>
+    <div class="card"><h3 class="mb-16">AI Insights</h3><div id="insights"></div></div>
+  </div>
+  <div class="card mt-24 mb-24"><h3 class="mb-16">Your Documents</h3><div id="docs"></div></div>
+</div>
+<script src="js/api.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/theme.js"></script>
+</body>
+</html>

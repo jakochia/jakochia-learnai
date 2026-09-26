@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="teens">
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Upload — Jakochia LearnAI</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/theme.css" />
+</head>
+<body>
+<nav class="navbar"><div class="container">
+  <a href="dashboard.html" class="brand">🧠 Jakochia<span>LearnAI</span></a>
+  <div class="nav-links">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="upload.html" class="active">Upload</a>
+    <a href="chat.html">Chat</a>
+    <a href="quiz.html">Quizzes</a>
+    <a href="flashcards.html">Flashcards</a>
+    <a href="planner.html">Planner</a>
+    <a href="#" id="logout">Logout</a>
+  </div>
+</div></nav>
+<div class="container mt-24" style="max-width:760px;">
+  <div class="card mb-24">
+    <h2 class="mb-8">Upload study material</h2>
+    <p class="muted mb-24">PDF, DOCX, PPTX, TXT, MD, or image.</p>
+    <form id="upload-form" class="form">
+      <div class="form-row">
+        <input id="file" class="input" type="file" required
+          accept=".pdf,.docx,.doc,.pptx,.ppt,.txt,.md,.png,.jpg,.jpeg,.webp,.bmp" />
+      </div>
+      <button class="btn btn-primary" type="submit" id="upload-btn">Upload & Process</button>
+    </form>
+    <div id="status" class="muted mt-16"></div>
+  </div>
+  <div class="card"><h3 class="mb-16">Your documents</h3><div id="docs"><p class="muted">Loading…</p></div></div>
+</div>
+<script src="js/api.js"></script>
+<script src="js/upload.js"></script>
+<script src="js/theme.js"></script>
+</body>
+</html>

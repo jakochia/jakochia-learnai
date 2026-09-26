@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="teens">
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chat — Jakochia LearnAI</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/theme.css" />
+</head>
+<body>
+<nav class="navbar"><div class="container">
+  <a href="dashboard.html" class="brand">🧠 Jakochia<span>LearnAI</span></a>
+  <div class="nav-links">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="upload.html">Upload</a>
+    <a href="chat.html" class="active">Chat</a>
+    <a href="quiz.html">Quizzes</a>
+    <a href="flashcards.html">Flashcards</a>
+    <a href="planner.html">Planner</a>
+    <a href="#" id="logout">Logout</a>
+  </div>
+</div></nav>
+<div class="container mt-24" style="max-width:900px;">
+  <div class="card mb-16">
+    <div class="flex-between">
+      <div><h2 class="mb-8">Chat with your documents</h2><p class="muted">Answers come from your uploads with cited sources.</p></div>
+      <div class="form-row">
+        <label>Explain like</label>
+        <select class="select" id="difficulty">
+          <option value="beginner">Beginner</option>
+          <option value="highschool">High school</option>
+          <option value="college" selected>College</option>
+          <option value="technical">Technical</option>
+          <option value="expert">Expert</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="chat-window" id="chat-window">
+    <div class="message ai">Hi! Ask me anything about your uploaded study materials. 📚</div>
+  </div>
+  <form id="chat-form" class="chat-input-row">
+    <input id="question" class="input" placeholder="e.g. What is the purpose of a VLAN?" required />
+    <button class="btn btn-primary" type="submit" id="send-btn">Send</button>
+  </form>
+</div>
+<script src="js/api.js"></script>
+<script src="js/chat.js"></script>
+<script src="js/theme.js"></script>
+</body>
+</html>

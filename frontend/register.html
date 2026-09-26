@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="teens">
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Register — Jakochia LearnAI</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/theme.css" />
+</head>
+<body>
+<nav class="navbar"><div class="container">
+  <a href="index.html" class="brand">🧠 Jakochia<span>LearnAI</span></a>
+  <div class="nav-links"><a href="login.html">Login</a></div>
+</div></nav>
+<div class="container auth-wrap">
+  <div class="card">
+    <h2 class="mb-16">Create your account</h2>
+    <p class="muted mb-24">Upload. Learn. Practice. Master.</p>
+    <form id="register-form" class="form">
+      <div class="form-row"><label>Full name</label><input class="input" name="full_name" required /></div>
+      <div class="form-row"><label>Email</label><input class="input" type="email" name="email" required /></div>
+      <div class="form-row"><label>Password</label><input class="input" type="password" name="password" minlength="6" required /></div>
+      <button class="btn btn-primary btn-block" type="submit">Create account</button>
+    </form>
+    <p class="muted mt-16 text-center">Already have an account? <a href="login.html">Login</a></p>
+  </div>
+</div>
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="teens">
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Quizzes — Jakochia LearnAI</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/theme.css" />
+</head>
+<body>
+<nav class="navbar"><div class="container">
+  <a href="dashboard.html" class="brand">🧠 Jakochia<span>LearnAI</span></a>
+  <div class="nav-links">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="upload.html">Upload</a>
+    <a href="chat.html">Chat</a>
+    <a href="quiz.html" class="active">Quizzes</a>
+    <a href="flashcards.html">Flashcards</a>
+    <a href="planner.html">Planner</a>
+    <a href="#" id="logout">Logout</a>
+  </div>
+</div></nav>
+<div class="container mt-24" style="max-width:820px;">
+  <div class="card mb-16" id="setup-card">
+    <h2 class="mb-16">Generate a quiz</h2>
+    <form id="quiz-form" class="form">
+      <div class="form-row"><label>Document</label><select class="select" id="doc-select" required></select></div>
+      <div class="flex gap-16" style="flex-wrap:wrap;">
+        <div class="form-row" style="flex:1; min-width:140px;"><label>Questions</label><input class="input" type="number" id="num-q" value="10" min="1" max="30" /></div>
+        <div class="form-row" style="flex:1; min-width:140px;"><label>Difficulty</label>
+          <select class="select" id="q-difficulty">
+            <option value="easy">Easy</option><option value="medium">Medium</option><option value="hard">Hard</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit" id="gen-btn">Generate Quiz</button>
+    </form>
+  </div>
+  <div class="card hidden" id="quiz-card">
+    <div class="flex-between mb-16"><h3 id="quiz-title">Quiz</h3><span class="badge" id="quiz-progress">0/0</span></div>
+    <div id="question-area"></div>
+    <div class="flex-between mt-24">
+      <button class="btn btn-ghost" id="prev-btn">← Previous</button>
+      <button class="btn btn-primary" id="next-btn">Next →</button>
+    </div>
+  </div>
+  <div class="card hidden" id="result-card">
+    <h2 class="mb-16">Result</h2>
+    <div id="result-body"></div>
+    <button class="btn btn-primary mt-24" onclick="location.reload()">New Quiz</button>
+  </div>
+</div>
+<script src="js/api.js"></script>
+<script src="js/quiz.js"></script>
+<script src="js/theme.js"></script>
+</body>
+</html>
